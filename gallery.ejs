@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- ==============================================================
+     COMMIT A-2: Tạo file gallery.ejs ở thư mục gốc project
+     (cùng cấp với index.ejs, about.ejs, shop.ejs)
+     ============================================================== -->
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery Hoa - Flower Shop</title>
+  <link rel="stylesheet" href="/templatemo_style.css" />
+</head>
+<body>
+  <div id="templatemo_wrapper">
+    <div id="templatemo_header">
+      <div id="site_title"><h1><a href="/">🌸 Flower Shop</a></h1></div>
+    </div>
+
+    <div id="templatemo_menu_panel">
+      <ul id="templatemo_menu">
+        <li><a href="/" class="<%= currentPage==='home' ? 'current' : '' %>">Home</a></li>
+        <li><a href="/gallery" class="<%= currentPage==='gallery' ? 'current' : '' %>">Gallery</a></li>
+        <li><a href="/shop" class="<%= currentPage==='shop' ? 'current' : '' %>">Shop</a></li>
+        <li><a href="/about" class="<%= currentPage==='about' ? 'current' : '' %>">About</a></li>
+        <li><a href="/cart" class="<%= currentPage==='cart' ? 'current' : '' %>">Cart (<%= cartCount %>)</a></li>
+      </ul>
+    </div>
+
+    <div id="templatemo_content_wrapper">
+      <div id="templatemo_content">
+        <h1 class="page_title">Gallery Hoa</h1>
+        <p>Bộ sưu tập hoa tươi đẹp nhất của chúng tôi.</p>
+
+        <div class="product_box">
+          <div class="product_image">
+            <img src="/images/product_01.jpg" alt="Hoa Hồng" />
+          </div>
+          <h3>Hoa Hồng Đỏ</h3>
+          <p>Biểu tượng của tình yêu và đam mê. Hoa hồng đỏ tươi thắm mỗi ngày.</p>
+          <p class="price">120.000 VNĐ / bó</p>
+        </div>
+
+        <div class="product_box">
+          <div class="product_image">
+            <img src="/images/product_02.jpg" alt="Hoa Cúc" />
+          </div>
+          <h3>Hoa Cúc Vàng</h3>
+          <p>Tươi sáng và rực rỡ, hoa cúc vàng mang lại may mắn và hạnh phúc.</p>
+          <p class="price">80.000 VNĐ / bó</p>
+        </div>
+
+        <div class="product_box">
+          <div class="product_image">
+            <img src="/images/product_03.jpg" alt="Hoa Ly" />
+          </div>
+          <h3>Hoa Ly Trắng</h3>
+          <p>Thanh khiết và thuần khiết, hoa ly trắng phù hợp mọi dịp lễ.</p>
+          <p class="price">150.000 VNĐ / bó</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="templatemo_footer">
+      <p>&copy; 2024 Flower Shop. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>

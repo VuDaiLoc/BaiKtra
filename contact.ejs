@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Contact | Flower Shop</title>
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+<style>
+  label { display: block; margin: 10px 0 4px; color: #f1a5d5; }
+  input[type=text], input[type=email], textarea {
+    width: 96%; padding: 6px; background: #5a0a2e; border: 1px solid #be457c;
+    color: #fff; margin-bottom: 10px;
+  }
+  textarea { height: 100px; resize: vertical; }
+</style>
+</head>
+<body>
+<div id="templatemo_container">
+
+  <div id="templatemo_top_panel">
+    <div id="templatemo_language_section">
+      <a href="#"><img src="images/templatemo_flag_01.gif" alt="flag 1" /></a>
+    </div>
+    <div id="templatemo_shopping_cart">
+      Shopping Cart <span>(<a href="/cart"><%= cartCount %> items</a>)</span>
+    </div>
+  </div>
+
+  <div id="templatemo_header">
+    <img src="images/templatemo_site_header.jpg" alt="Flower Shop" />
+  </div>
+  <div id="templatemo_banner">
+    <a href="/"><img src="images/templatemo_banner_image.jpg" alt="Flower Shop" border="0" /></a>
+  </div>
+
+  <div id="templatemo_menu_panel">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/shop">Shop</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/contact" class="current">Contact Us</a></li>
+      <li><a href="/cart">Cart</a></li>
+    </ul>
+  </div>
+
+  <div id="templatemo_content">
+    <div id="templatemo_content_left">
+      <h1>Liên Hệ</h1>
+      <p>Hãy liên hệ với chúng tôi nếu bạn có bất kỳ câu hỏi nào. Chúng tôi luôn sẵn sàng hỗ trợ bạn!</p>
+      <div class="cleaner_with_height">&nbsp;</div>
+      <h2>Gửi Tin Nhắn</h2>
+
+      <form method="post" action="/contact">
+        <label>Họ và tên</label>
+        <input type="text" name="name" placeholder="Nguyễn Văn A" />
+        <label>Email</label>
+        <input type="email" name="email" placeholder="email@example.com" />
+        <label>Tin nhắn</label>
+        <textarea name="message" placeholder="Nội dung..."></textarea>
+        <div class="buynow">
+          <a href="#" onclick="this.closest('form').submit(); return false;">Gửi</a>
+        </div>
+      </form>
+
+      <div class="cleaner_with_height">&nbsp;</div>
+    </div>
+
+    <div id="templatemo_content_right">
+      <div class="templatemo_right_section">
+        <h4>Thông Tin</h4>
+        <div class="templatemo_right_section_content">
+          <p>📍 123 Đường Hoa, Q.1, TP.HCM</p>
+          <p>📞 0909 123 456</p>
+          <p>✉ hello@flowershop.vn</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cleaner">&nbsp;</div>
+  </div>
+
+  <div id="templatemo_footer_panel">
+    <div id="footer_left">
+      <img src="images/mastercard.gif" alt="Master Card" />
+      <img src="images/visa.gif" alt="Visa Card" />
+      <img src="images/paypal.gif" alt="PayPal" />
+    </div>
+    <div id="footer_right">Copyright &copy; 2024 <a href="#">Flower Shop</a></div>
+    <div class="cleaner">&nbsp;</div>
+  </div>
+
+</div>
+</body>
+</html>

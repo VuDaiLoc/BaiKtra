@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Flower Shop</title>
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="templatemo_container">
+
+  <!-- TOP PANEL -->
+  <div id="templatemo_top_panel">
+    <div id="templatemo_language_section">
+      <a href="#"><img src="images/templatemo_flag_01.gif" alt="flag 1" /></a>
+      <a href="#"><img src="images/templatemo_flag_02.gif" alt="flag 2" /></a>
+      <a href="#"><img src="images/templatemo_flag_03.gif" alt="flag 3" /></a>
+      <a href="#"><img src="images/templatemo_flag_04.gif" alt="flag 4" /></a>
+      <a href="#"><img src="images/templatemo_flag_05.gif" alt="flag 5" /></a>
+    </div>
+    <div id="templatemo_shopping_cart">
+      Shopping Cart <span>(<a href="/cart"><%= cartCount %> items</a>)</span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <div id="templatemo_header">
+    <img src="images/templatemo_site_header.jpg" alt="Flower Shop" />
+  </div>
+
+  <!-- BANNER -->
+  <div id="templatemo_banner">
+    <a href="#"><img src="images/templatemo_banner_image.jpg" alt="Flower Shop" border="0" /></a>
+  </div>
+
+  <!-- MENU -->
+  <div id="templatemo_menu_panel">
+    <ul>
+      <li><a href="/" class="<%= currentPage==='home'    ? 'current' : '' %>">Home</a></li>
+      <li><a href="/shop" class="<%= currentPage==='shop'    ? 'current' : '' %>">Shop</a></li>
+      <li><a href="/about" class="<%= currentPage==='about'   ? 'current' : '' %>">About Us</a></li>
+      <li><a href="/contact" class="<%= currentPage==='contact' ? 'current' : '' %>">Contact Us</a></li>
+      <li><a href="/cart" class="<%= currentPage==='cart'    ? 'current' : '' %>">Cart</a></li>
+    </ul>
+  </div>
+
+  <!-- CONTENT -->
+  <div id="templatemo_content">
+
+    <div id="templatemo_content_left">
+      <h1>Welcome to Our Flower Site</h1>
+      <p>Chào mừng bạn đến với Flower Shop — nơi mang đến những bông hoa tươi đẹp nhất cho mọi dịp đặc biệt trong cuộc sống của bạn.</p>
+      <p>Chúng tôi cung cấp đa dạng các loại hoa tươi, hoa khô, hoa lụa và quà tặng. Tất cả đều được tuyển chọn kỹ lưỡng để đảm bảo chất lượng tốt nhất.</p>
+
+      <div class="cleaner_with_height">&nbsp;</div>
+
+      <h2>New Products</h2>
+
+      <% products.forEach(function(p) { %>
+      <div class="product_box">
+        <h3><%= p.name %></h3>
+        <img src="<%= p.image %>" alt="<%= p.name %>" />
+        <p><%= p.desc %></p>
+        <div class="price">PRICE:<span>$<%= p.price %></span></div>
+        <div class="buynow"><a href="/cart">Buy Now</a></div>
+        <a href="/shop">Details</a>
+      </div>
+      <% }); %>
+
+      <div class="cleaner_with_height">&nbsp;</div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div id="templatemo_content_right">
+      <div class="templatemo_right_section">
+        <h4>Search</h4>
+        <div class="templatemo_right_section_content">
+          <form method="get" action="/shop">
+            <input name="keyword" type="text" id="keyword" />
+            <input type="submit" name="submit" class="button" value="Search" />
+          </form>
+        </div>
+      </div>
+
+      <div class="templatemo_right_section">
+        <h4>Categories</h4>
+        <div class="templatemo_right_section_content">
+          <ul>
+            <li><a href="#">Artificial and Silk</a></li>
+            <li><a href="#">Dried and Preserved</a></li>
+            <li><a href="#">Floral</a></li>
+            <li><a href="#">Fresh Cut</a></li>
+            <li><a href="#">Gardens</a></li>
+            <li><a href="#">Gifts</a></li>
+            <li><a href="#">Nurseries</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Weddings</a></li>
+            <li><a href="#">Wholesale</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="cleaner">&nbsp;</div>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="templatemo_footer_panel">
+    <div id="footer_left">
+      <img src="images/mastercard.gif" alt="Master Card" />
+      <img src="images/visa.gif" alt="Visa Card" />
+      <img src="images/paypal.gif" alt="PayPal" />
+      <img src="images/verisignsecured.gif" alt="Verisign Secured" />
+    </div>
+    <div id="footer_right">
+      Copyright &copy; 2024 <a href="#">Flower Shop</a><br />
+      Design by <a href="http://www.templatemo.com" target="_blank">TemplateMo</a>
+    </div>
+    <div class="cleaner">&nbsp;</div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Shop | Flower Shop</title>
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="templatemo_container">
+
+  <div id="templatemo_top_panel">
+    <div id="templatemo_language_section">
+      <a href="#"><img src="images/templatemo_flag_01.gif" alt="flag 1" /></a>
+      <a href="#"><img src="images/templatemo_flag_02.gif" alt="flag 2" /></a>
+      <a href="#"><img src="images/templatemo_flag_03.gif" alt="flag 3" /></a>
+    </div>
+    <div id="templatemo_shopping_cart">
+      Shopping Cart <span>(<a href="/cart"><%= cartCount %> items</a>)</span>
+    </div>
+  </div>
+
+  <div id="templatemo_header">
+    <img src="images/templatemo_site_header.jpg" alt="Flower Shop" />
+  </div>
+
+  <div id="templatemo_banner">
+    <a href="/"><img src="images/templatemo_banner_image.jpg" alt="Flower Shop" border="0" /></a>
+  </div>
+
+  <div id="templatemo_menu_panel">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/shop" class="current">Shop</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/contact">Contact Us</a></li>
+      <li><a href="/cart">Cart</a></li>
+    </ul>
+  </div>
+
+  <div id="templatemo_content">
+    <div id="templatemo_content_left">
+      <h1>Tất Cả Sản Phẩm</h1>
+      <p>Khám phá bộ sưu tập hoa phong phú của chúng tôi. Tất cả đều tươi mới và được giao hàng tận nơi.</p>
+
+      <div class="cleaner_with_height">&nbsp;</div>
+      <h2>Sản Phẩm</h2>
+
+      <% products.forEach(function(p) { %>
+      <div class="product_box">
+        <h3><%= p.name %></h3>
+        <img src="<%= p.image %>" alt="<%= p.name %>" />
+        <p><%= p.desc %></p>
+        <div class="price">PRICE:<span>$<%= p.price %></span></div>
+        <div class="buynow"><a href="/cart">Buy Now</a></div>
+        <a href="#">Details</a>
+      </div>
+      <% }); %>
+
+      <div class="cleaner_with_height">&nbsp;</div>
+    </div>
+
+    <div id="templatemo_content_right">
+      <div class="templatemo_right_section">
+        <h4>Search</h4>
+        <div class="templatemo_right_section_content">
+          <form method="get" action="/shop">
+            <input name="keyword" type="text" id="keyword" />
+            <input type="submit" name="submit" class="button" value="Search" />
+          </form>
+        </div>
+      </div>
+      <div class="templatemo_right_section">
+        <h4>Categories</h4>
+        <div class="templatemo_right_section_content">
+          <ul>
+            <li><a href="#">Artificial and Silk</a></li>
+            <li><a href="#">Dried and Preserved</a></li>
+            <li><a href="#">Floral</a></li>
+            <li><a href="#">Fresh Cut</a></li>
+            <li><a href="#">Gardens</a></li>
+            <li><a href="#">Gifts</a></li>
+            <li><a href="#">Weddings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="cleaner">&nbsp;</div>
+  </div>
+
+  <div id="templatemo_footer_panel">
+    <div id="footer_left">
+      <img src="images/mastercard.gif" alt="Master Card" />
+      <img src="images/visa.gif" alt="Visa Card" />
+      <img src="images/paypal.gif" alt="PayPal" />
+    </div>
+    <div id="footer_right">
+      Copyright &copy; 2024 <a href="#">Flower Shop</a>
+    </div>
+    <div class="cleaner">&nbsp;</div>
+  </div>
+
+</div>
+</body>
+</html>

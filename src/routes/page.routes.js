@@ -9,3 +9,4 @@ router.get('/contact', ctrl.contact);
 router.get('/cart',    ctrl.cart);
 
 module.exports = router;
+router.get('/gallery', ctrl.gallery);

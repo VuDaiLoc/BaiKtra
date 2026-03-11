@@ -45,3 +45,11 @@ exports.cart = (req, res) => {
     ],
   });
 };
+
+exports.gallery = (req, res) => {
+  res.render('gallery', {
+    currentPage: 'gallery',
+    cartCount: 3,
+    title: 'Gallery',
+  });
+};

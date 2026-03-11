@@ -31,3 +31,11 @@ exports.remove   = (req, res) => {
   products.splice(i, 1);
   res.json({ success: true, message: 'Deleted' });
 };
+
+exports.search = (req, res) => {
+  const { q } = req.query;
+  const result = products.filter(p =>
+    p.name.toLowerCase().includes((q || '').toLowerCase())
+  );
+  res.json({ success: true, data: result });
+};
